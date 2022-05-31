@@ -11,8 +11,28 @@
     </head>
     <body>
         <header></header>
-        <main></main>
+        <main>
+            <p class="instructions">Move Super Dog in Space&excl;</p>
+            <p id="p1"></p>
+            <div class="bkgd">
+                <div class="character">
+                    <img src="images/dog.svg" alt="Smiling cartoon dog standing upright">
+                </div>
+                <div class="characterDest">
+                    <img src="images/dog.svg" alt="Smiling cartoon dog standing upright">
+                </div>
+            </div>
+            <div class="control">
+                <div class="btn" id="play">play</div>
+                <div class="btn" id="pause">pause</div>
+                <div class="btn" id="reverse">reverse</div>
+                <div class="btn" id="restart">restart</div>
+                <div class="btn" id="slowDown">slow down</div>
+                <div class="btn" id="speedUp">speed up</div>
+            </div>
+        </main>
         <footer></footer>
-        <script type="text/javascript" src="scripts/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
