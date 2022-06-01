@@ -17,10 +17,43 @@
 body {
     width: 100vw;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background-color: #11172c;
+}
+
+/* -----------------------------
+------- Game Components --------
+----------------------------- */
+.bkgd {
+    background: url(../images/milky-way.jpg);
+    background-position: 100% 0;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5em;
+    animation: galaxyBg 6s alternate-reverse infinite;
+    overflow: hidden;
+}
+
+.character {
+    width: 25vmin;
+    height: 25vmin;
+    position: absolute;
+    top: 12em;
+    left: 12em;
+    align-items: center;
+    justify-content: center;
+}
+
+.ghost {
+    width: 25vmin;
+    height: 25vmin;
+    position: absolute;
+    top: 12em;
+    right: 12em;
+    align-items: center;
+    justify-content: center;
+    opacity: 50%;
 }
 
 /* -----------------------------
@@ -34,7 +67,7 @@ body {
 ---------- Buttons -------------
 ----------------------------- */
 .btn {
-    width: 8.5em;
+    width: 12em;
     height: 3.5em;
     margin: 10px; 
     border-radius:25px; 
@@ -55,84 +88,25 @@ body {
 
 .control{
     display: flex;
+    flex-wrap: wrap;
+    margin: 1em auto;
+    justify-content: center;
 }
 
 /* -----------------------------
 -------- Orientation -----------
 ----------------------------- */
 @media (orientation:landscape) {
-    body {
-        background-color: #11172c;
-    }
-
     .bkgd {
-        width: 100vmin;
-        height: 75vmin;
-        background: url(../images/milky-way.jpg);
-        background-position: 100% 0;
-        position: relative;
-        border-radius: 5em;
-        animation: galaxyBg 6s alternate-reverse infinite;
-        overflow: hidden;
-    }
-    
-    .character {
-        width: 30vmin;
-        height: 30vmin;
-        position: absolute;
-        top: 12em;
-        left: 12em;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .characterDest {
-        width: 30vmin;
-        height: 30vmin;
-        position: absolute;
-        top: 12em;
-        right: 12em;
-        align-items: center;
-        justify-content: center;
-        opacity: 50%;
+        width: 90vmin;
+        height: 70vmin;
     }
 }
 
 @media (orientation:portrait) {
-    body {
-        background-color: #11172c;
-    }
-
     .bkgd {
-        width: 70vmin;
-        height: 90vmin;
-        background: url(../images/milky-way.jpg);
-        background-position: 100% 0;
-        position: relative;
-        border-radius: 5em;
-        animation: galaxyBg 6s alternate-reverse infinite;
-        overflow: hidden;
-    }
-    
-    .character {
-        width: 30vmin;
-        height: 30vmin;
-        position: absolute;
-        top: 12em;
-        left: 12em;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .characterDest {
-        width: 30vmin;
-        height: 30vmin;
-        position: absolute;
-        top: 12em;
-        left: 12em;
-        align-items: center;
-        justify-content: center;
-        opacity: 50%;
+        width: 60vmin;
+        height: 70vmin;
     }
 }
 
