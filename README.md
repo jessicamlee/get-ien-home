@@ -1,2 +1,2 @@
 # firstgame
-Using HTML, CSS, GSAP timeline, and JavaScript to make my first game!
+Using HTML, CSS, and JavaScript to make my first game, Get IEN Home!
