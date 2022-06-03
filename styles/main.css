@@ -5,13 +5,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 10px;
+    font-size: 16px;
     color: whitesmoke;
     text-align: center;
     line-height: 120%;
-    text-transform: uppercase;
     padding: 1em;
-    font-size: 2em;
 }
 
 body {
@@ -26,60 +24,61 @@ body {
 ------- Game Components --------
 ----------------------------- */
 .bkgd {
-    background: url(../images/milky-way.jpg);
-    background-position: 100% 0;
+    background: url(../images/stars_in_space.png);
+    background-position: 100% 0%;
     position: relative;
     margin: 0 auto;
     border-radius: 5em;
-    animation: galaxyBg 6s alternate-reverse infinite;
+    animation: spaceBg 12s alternate-reverse infinite;
     overflow: hidden;
 }
 
-.character {
-    width: 25vmin;
-    height: 25vmin;
+.alien {
+    width: 30vmin;
+    height: 30vmin;
     position: absolute;
-    top: 12em;
-    left: 12em;
+    top: 8em;
+    left: 1em;
     align-items: center;
     justify-content: center;
 }
 
-.ghost {
-    width: 25vmin;
-    height: 25vmin;
+.planet {
+    width: 10vmin;
+    height: 10vmin;
     position: absolute;
-    top: 12em;
-    right: 12em;
+    top: 10em;
+    right: 3em;
     align-items: center;
     justify-content: center;
-    opacity: 50%;
 }
 
 /* -----------------------------
 -------- Typography ------------
 ----------------------------- */
 .instructions {
-    margin: 1em auto;
+    font-size: 1.5em;
+    margin: 2em auto 0.7em;
 }
 
 /* -----------------------------
 ---------- Buttons -------------
 ----------------------------- */
 .btn {
-    width: 12em;
+    width: 7em;
     height: 3.5em;
-    margin: 10px; 
-    border-radius:25px; 
-    padding: 12px 36px;
+    margin: 0.6em; 
+    border-radius:1.7em; 
+    padding: 0.75em 2em;
     cursor: pointer; 
     background-color:rgb(204, 33, 195); 
     text-align: center; 
     line-height: 25px; 
     color:white; 
     font-family: 'Courier New', Courier, monospace; 
-    font-size: 14px;
+    font-size: 0.85em;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .btn:hover{
@@ -99,7 +98,7 @@ body {
 @media (orientation:landscape) {
     .bkgd {
         width: 90vmin;
-        height: 70vmin;
+        height: 60vmin;
     }
 }
 
@@ -108,12 +107,22 @@ body {
         width: 60vmin;
         height: 70vmin;
     }
+
+    .alien {
+        width: 30vmin;
+        height: 30vmin;
+    }
+
+    .planet {
+        width: 8vmin;
+        height: 8vmin;
+    }
 }
 
 /* -----------------------------
 ---------- Keyframes -----------
 ----------------------------- */
-@keyframes galaxyBg {
+@keyframes spaceBg {
     0% {
         background-position: 100% 0%;
     }
