@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>First Game!</title>
+        <title>Get IEN Home</title>
+        <link rel="icon" type="image/x-icon" href="/images/ien_alien_favicon.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/main.css">
@@ -12,23 +13,18 @@
     <body>
         <header></header>
         <main>
-            <p class="instructions">Move Super Dog in Space&excl;</p>
+            <p id="instructions" class="instructions">Help IEN return home&excl;</p>
             <p id="p1"></p>
             <div class="bkgd">
-                <div class="character">
-                    <img src="images/dog.svg" alt="Smiling cartoon dog standing upright">
+                <div id="alien" class="alien">
+                    <img src="images/alien_character.svg" alt="Smiling alien cartoon looking toward at planet in the top-right">
                 </div>
-                <div class="ghost">
-                    <img src="images/dog.svg" alt="Smiling cartoon dog standing upright">
+                <div class="planet">
+                    <img src="images/alien_planet.svg" alt="Dark red fictional planet">
                 </div>
             </div>
             <div class="control">
-                <div class="btn" id="play">play</div>
-                <div class="btn" id="pause">pause</div>
-                <div class="btn" id="reverse">reverse</div>
-                <div class="btn" id="restart">restart</div>
-                <div class="btn" id="slowDown">slow down</div>
-                <div class="btn" id="speedUp">speed up</div>
+                <div id="toggle" class="btn">fly</div>
             </div>
         </main>
         <footer></footer>
