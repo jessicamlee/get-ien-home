@@ -1,29 +1,44 @@
-gsap.set(".character",{x:-360, y:-200});
-var anim = gsap.to(".character", {x:800, duration:6, paused:true});
+var toggle=0;
+alien.keyf =[
+    {transform: 'translate(-100px,0px)'},
+    {transform: 'translate(800px,0px)'},
+]
+alien.opt = {
+    duration: 3000,
+    easing:'linear',
+    iterations: Infinity,
+    direction: 'normal',
+};
+var animateAlien = alien.animate(alien.keyf,alien.opt);
 
-gsap.set(".characterDest", {x:-70, y:-200});
-var destination = gsap.to(".characterDest", {x:600, duration:1.5, rotate:405});
+const toggleBtn=document.querySelector(".btn");
+const myAlien=document.querySelector(".alien");
+var myPos=myAlien.getBoundingClientRect();
 
-var playBtn=document.querySelector("#play");
-var pauseBtn=document.querySelector("#pause");
-var reverseBtn=document.querySelector("#reverse");
-var restartBtn=document.querySelector("#restart");
-var slowDownBtn=document.querySelector("#slowDown");
-var speedUpBtn=document.querySelector("#speedUp");
+toggleBtn.addEventListener("click", onclick);
 
-playBtn.onclick = function(){ anim.play()};
-pauseBtn.onclick = function(){ anim.pause()};
-reverseBtn.onclick = function(){ anim.reverse()};
-restartBtn.onclick = function(){ anim.restart()};
-slowDownBtn.onclick = function(){ anim.play(), anim.timeScale(0.1)};
-speedUpBtn.onclick = function(){ anim.play(), anim.timeScale(1.5)};
+function onclick(){
+    if(toggle>0) {
+        animateAlien.play();
+        toggle=0;
+        toggleBtn.innerHTML="FLY";
+        console.log(myPos.x);
+    }else{
+        animateAlien.pause();
+        toggle=1;
+        toggleBtn.innerHTML="STOP";
+        console.log(myPos.x);
+    }
+};
 
-function celebrate() {
-    var P1=document.querySelector("#p1");
-    if(anim.x == destination.x) {
-        P1.innerHTML="Great accuracy!";
+const myPlanet=document.querySelector(".planet");
+var planetPos=myPlanet.getBoundingClientRect();
+console.log(planetPos.x);
+
+function celebrate(){
+    if(myPos.x==planetPos.x){
+        console.log("Hurray!");
+    }else{
+        null
     }
 }
-
-var progressDest = destination.progress(); 
-var progressAnim = anim.progress(); 

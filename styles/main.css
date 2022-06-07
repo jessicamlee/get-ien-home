@@ -29,13 +29,13 @@ body {
     position: relative;
     margin: 0 auto;
     border-radius: 5em;
-    animation: spaceBg 12s alternate-reverse infinite;
+    animation: spaceBg 300s linear infinite;
     overflow: hidden;
 }
 
 .alien {
-    width: 30vmin;
-    height: 30vmin;
+    width: 20vmin;
+    height: 20vmin;
     position: absolute;
     top: 8em;
     left: 1em;
@@ -44,10 +44,10 @@ body {
 }
 
 .planet {
-    width: 10vmin;
-    height: 10vmin;
+    width: 12vmin;
+    height: 12vmin;
     position: absolute;
-    top: 10em;
+    top: 8em;
     right: 3em;
     align-items: center;
     justify-content: center;
