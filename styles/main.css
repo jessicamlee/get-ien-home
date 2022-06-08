@@ -107,16 +107,6 @@ body {
         width: 60vmin;
         height: 70vmin;
     }
-
-    .alien {
-        width: 30vmin;
-        height: 30vmin;
-    }
-
-    .planet {
-        width: 8vmin;
-        height: 8vmin;
-    }
 }
 
 /* -----------------------------

@@ -21,12 +21,12 @@ function onclick(){
     if(toggle>0) {
         animateAlien.play();
         toggle=0;
-        toggleBtn.innerHTML="FLY";
+        toggleBtn.innerHTML="STOP";
         console.log(myPos.x);
     }else{
         animateAlien.pause();
         toggle=1;
-        toggleBtn.innerHTML="STOP";
+        toggleBtn.innerHTML="FLY";
         console.log(myPos.x);
     }
 };
@@ -35,10 +35,6 @@ const myPlanet=document.querySelector(".planet");
 var planetPos=myPlanet.getBoundingClientRect();
 console.log(planetPos.x);
 
-function celebrate(){
-    if(myPos.x==planetPos.x){
-        console.log("Hurray!");
-    }else{
-        null
-    }
-}
+if (myPos.y==planetPos.y) {
+    console.log("Hurray!");
+};
