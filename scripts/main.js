@@ -15,6 +15,10 @@ const toggleBtn=document.querySelector(".btn");
 const myAlien=document.querySelector(".alien");
 var myPos=myAlien.getBoundingClientRect();
 
+const myPlanet=document.querySelector(".planet");
+var planetPos=myPlanet.getBoundingClientRect();
+console.log(planetPos.x);
+
 toggleBtn.addEventListener("click", onclick);
 
 function onclick(){
@@ -23,18 +27,12 @@ function onclick(){
         toggle=0;
         toggleBtn.innerHTML="STOP";
         console.log(myPos.x);
-    }else{
+    }else if (myPos.y==planetPos.y) {
         animateAlien.pause();
         toggle=1;
         toggleBtn.innerHTML="FLY";
         console.log(myPos.x);
+        console.log("Hooray!");
+        myPlanet.style.transform='scale(3)';
     }
-};
-
-const myPlanet=document.querySelector(".planet");
-var planetPos=myPlanet.getBoundingClientRect();
-console.log(planetPos.x);
-
-if (myPos.y==planetPos.y) {
-    console.log("Hurray!");
 };
