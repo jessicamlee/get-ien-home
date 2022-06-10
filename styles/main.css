@@ -41,6 +41,7 @@ body {
     left: 1em;
     align-items: center;
     justify-content: center;
+    z-index:1;
 }
 
 .planet {
@@ -61,9 +62,14 @@ h1 {
     margin: 1em auto 0;
 }
 
-.instructions {
+.instructions, .hooray {
     font-size: 1.25em;
     margin: 0.5em auto 1.5em;
+}
+
+.hooray {
+    justify-content: center;
+    align-content: center;
 }
 
 /* -----------------------------
@@ -95,6 +101,13 @@ h1 {
     flex-wrap: wrap;
     margin: 1em auto;
     justify-content: center;
+}
+
+/* -----------------------------
+----------- Footer -------------
+----------------------------- */
+footer {
+    padding: 1.2em auto;
 }
 
 /* -----------------------------
