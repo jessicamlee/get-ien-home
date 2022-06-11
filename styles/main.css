@@ -34,22 +34,22 @@ body {
 }
 
 .alien {
-    width: 20vmin;
-    height: 20vmin;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: 8em;
-    left: 1em;
+    top: 175px;
+    left: 50px;
     align-items: center;
     justify-content: center;
     z-index:1;
 }
 
 .planet {
-    width: 12vmin;
-    height: 12vmin;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 8em;
-    right: 3em;
+    top: 175px;
+    right: 50px;
     align-items: center;
     justify-content: center;
 }
