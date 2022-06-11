@@ -31,8 +31,10 @@ body {
     border-radius: 5em;
     animation: spaceBg 300s linear infinite;
     overflow: hidden;
-    width: 90vmin;
-    height: 60vmin;
+    /* width: 90vmin;
+    height: 60vmin; */
+    width: 760px;
+    height: 506px;
 }
 
 .alien {
@@ -51,7 +53,7 @@ body {
     height: 100px;
     position: absolute;
     top: 175px;
-    right: 50px;
+    left: 600px;
     align-items: center;
     justify-content: center;
 }
