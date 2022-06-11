@@ -31,6 +31,8 @@ body {
     border-radius: 5em;
     animation: spaceBg 300s linear infinite;
     overflow: hidden;
+    width: 90vmin;
+    height: 60vmin;
 }
 
 .alien {
@@ -113,7 +115,7 @@ footer {
 /* -----------------------------
 -------- Orientation -----------
 ----------------------------- */
-@media (orientation:landscape) {
+/* @media (orientation:landscape) {
     .bkgd {
         width: 90vmin;
         height: 60vmin;
@@ -125,7 +127,7 @@ footer {
         width: 60vmin;
         height: 70vmin;
     }
-}
+} */
 
 /* -----------------------------
 ---------- Keyframes -----------
