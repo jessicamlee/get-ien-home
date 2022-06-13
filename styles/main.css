@@ -10,15 +10,20 @@
     text-align: center;
     line-height: 120%;
     padding: 1em;
+    /* background-color: rgb(17 23 44); */
 }
 
 body {
-    width: 100vw;
+    width: 1024px;
     height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(17 23 44);
+}
+
+/* main {
     justify-content: center;
     align-items: center;
-    background-color: #11172c;
-}
+} */
 
 /* -----------------------------
 ------- Game Components --------
@@ -31,8 +36,6 @@ body {
     border-radius: 5em;
     animation: spaceBg 300s linear infinite;
     overflow: hidden;
-    /* width: 90vmin;
-    height: 60vmin; */
     width: 760px;
     height: 506px;
 }
@@ -53,7 +56,7 @@ body {
     height: 100px;
     position: absolute;
     top: 175px;
-    left: 600px;
+    right: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -86,18 +89,18 @@ h1 {
     border-radius:1.7em; 
     padding: 0.75em 2em;
     cursor: pointer; 
-    background-color:rgb(204, 33, 195); 
+    background-color:rgb(234, 137, 229); 
     text-align: center; 
     line-height: 25px; 
-    color:white; 
+    color:rgb(17 23 44); 
     font-family: 'Courier New', Courier, monospace; 
     font-size: 0.85em;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .btn:hover{
-    background-color: rgb(65, 150, 121);
+    background-color: rgb(105 242 231);
 }
 
 .control{
@@ -113,23 +116,6 @@ h1 {
 footer {
     padding: 1.2em auto;
 }
-
-/* -----------------------------
--------- Orientation -----------
------------------------------ */
-/* @media (orientation:landscape) {
-    .bkgd {
-        width: 90vmin;
-        height: 60vmin;
-    }
-}
-
-@media (orientation:portrait) {
-    .bkgd {
-        width: 60vmin;
-        height: 70vmin;
-    }
-} */
 
 /* -----------------------------
 ---------- Keyframes -----------

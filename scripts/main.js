@@ -1,4 +1,10 @@
+// Toggle Button
 var toggle=0;
+const toggleBtn=document.querySelector(".btn");
+// Alien Character
+const myAlien=document.querySelector(".alien");
+var alienPos=myAlien.getBoundingClientRect();
+// Alien Character Animation
 alien.keyf =[
     {transform: 'translate(-100px,0px)'},
     {transform: 'translate(800px,0px)'},
@@ -10,41 +16,40 @@ alien.opt = {
     direction: 'normal',
 };
 var animateAlien = alien.animate(alien.keyf,alien.opt);
-
-const toggleBtn=document.querySelector(".btn");
-const myAlien=document.querySelector(".alien");
-var alienPos=myAlien.getBoundingClientRect();
-
+// Planet Destination
 const myPlanet=document.querySelector(".planet");
 var planetPos=myPlanet.getBoundingClientRect();
-// console.log(planetPos.x);
-
+// Title & Instructions
 const gTitle = document.querySelector(".g-title");
 const instr = document.querySelector(".instructions");
-
+// Onclick Event via Toggle Button
 toggleBtn.addEventListener("click", onclick);
-
+// Onclick Function
 function onclick(){
     if(toggle>0) {
         animateAlien.play();
         toggle=0;
         toggleBtn.innerHTML="STOP";
-    }else if (alienPos.x<20 || alienPos.x>22) {
+        return;
+    }
+    alienPos=myAlien.getBoundingClientRect();
+    console.log("alienPost.x " + alienPos.x);
+    if (alienPos.x<900 || alienPos.x>930) {
         animateAlien.pause();
         toggle=1;
         toggleBtn.innerHTML="FLY";
         console.log(alienPos.x);
         instr.innerHTML="Try again.";
-    }else if (alienPos.x>=20 && alienPos.x<=22) {
+    }
+    if (alienPos.x>=900 && alienPos.x<=930) {
         animateAlien.pause();
         toggle=0;
         console.log(alienPos.x);
         console.log("Hooray!");
-        console.log(alienPos.x>=20 && alienPos.x<=22);
         myPlanet.style.zIndex=-1;
         myAlien.style.zIndex=-1;
         toggleBtn.innerHTML="YAY!";
-        gTitle.innerHTML="CONGRATULATIONS:";
+        gTitle.innerHTML="CONGRATULATIONS!";
         instr.innerHTML="Great job! You helped IEN home.";
     }
 };
