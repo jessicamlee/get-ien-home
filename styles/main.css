@@ -89,7 +89,7 @@ h1 {
     border-radius:1.7em; 
     padding: 0.75em 2em;
     cursor: pointer; 
-    background-color:rgb(234, 137, 229); 
+    background-color:rgb(105 242 231);
     text-align: center; 
     line-height: 25px; 
     color:rgb(17 23 44); 
@@ -100,7 +100,7 @@ h1 {
 }
 
 .btn:hover{
-    background-color: rgb(105 242 231);
+    background-color: rgb(126, 150, 255);
 }
 
 .control{
