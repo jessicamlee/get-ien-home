@@ -32,6 +32,7 @@ function onclick(){
         toggleBtn.innerHTML="STOP";
         return;
     }
+    // When IEN the Alien is not stopped at the right point
     alienPos=myAlien.getBoundingClientRect();
     console.log("alienPost.x " + alienPos.x);
     if (alienPos.x<900 || alienPos.x>930) {
@@ -41,6 +42,7 @@ function onclick(){
         console.log(alienPos.x);
         instr.innerHTML="Try again.";
     }
+    // When IEN the Alien is stopped at the right point
     if (alienPos.x>=900 && alienPos.x<=930) {
         animateAlien.pause();
         toggle=0;
